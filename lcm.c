@@ -12,15 +12,33 @@ int main()
     scanf("%f", &a);
     printf("Enter the second number:");
     scanf("%f", &b);
-    if (a==1 || a==3 || a==2 || a== 5 || a==7){
+    if (a==1 || a==3 || a== 5 || a==7){
         af=a; // if the number entered is a prime number, it is immediately multiplied to get lcm
     }
+    
+    if (a==3){
+        p3a=1;
+    }
+    
+    
+    if(a==2){
+        p2a=1;
+    }
+
     else{
         af=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
     }
     
-    if (b==1 || b==3 || b==2 || b== 5 || b==7){
+    if (b==1 || b== 5 || b==7){
         bf=b; // if the number entered is a prime number, it is immediately multiplied to get lcm
+    }
+    
+    if (b==3){
+        p3b=1;
+    }
+    
+    if(b==2){
+        p2b=1;
     }
     else{
         bf=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
@@ -101,5 +119,7 @@ int main()
     printf("\np3a is %f", p3a);
     printf("\np2b is %f", p2b);
     printf("\np3b is %f", p3b);
+    printf("\np2f is %f", p2f);
+    printf("\np3f is %f", p3f);
     return 0;
 }
