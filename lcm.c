@@ -12,10 +12,12 @@ int main()
     scanf("%f", &a);
     printf("Enter the second number:");
     scanf("%f", &b);
-    if (a==1 || a==3 || a== 5 || a==7){
+    if (a==1 || a==5 || a==7){
         af=a; // if the number entered is a prime number, it is immediately multiplied to get lcm
     }
-    
+     else{
+        af=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
+    }   
     if (a==3){
         p3a=1;
     }
@@ -25,14 +27,14 @@ int main()
         p2a=1;
     }
 
-    else{
-        af=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
-    }
+
     
     if (b==1 || b== 5 || b==7){
         bf=b; // if the number entered is a prime number, it is immediately multiplied to get lcm
     }
-    
+    else{
+        bf=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
+    }    
     if (b==3){
         p3b=1;
     }
@@ -40,9 +42,7 @@ int main()
     if(b==2){
         p2b=1;
     }
-    else{
-        bf=1; // if it is not a prime number, it is set into 1 so that whatever results into the following conditions, the value will not be affected; this cannot be initialized into zero as it will result to 0 lcm.
-    }
+
     if(a==4){ // if the number is 4, its factor is 2 raised 2
         p2a=2; //hence, the p2a refers to the power of the factor 2. (2 raised 2)
         p3a=0; // if 3 is not a prime factor of the number entered, the default power is 0, which automatically produces 1 (example: 3 raised to 0 is 1)thereby not affecting the lcm equation
@@ -121,5 +121,7 @@ int main()
     printf("\np3b is %f", p3b);
     printf("\np2f is %f", p2f);
     printf("\np3f is %f", p3f);
+    printf("\naf is %f", af);
+    printf("\nbf is %f", bf);
     return 0;
 }
