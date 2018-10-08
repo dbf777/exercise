@@ -20,11 +20,13 @@ int main()
     }   
     if (a==3){
         p3a=1;
+        p2a=0;
     }
     
     
     if(a==2){
         p2a=1;
+        p3a=0;
     }
 
 
@@ -37,10 +39,12 @@ int main()
     }    
     if (b==3){
         p3b=1;
+        p2b=0;
     }
     
     if(b==2){
         p2b=1;
+        p3b=0;
     }
 
     if(a==4){ // if the number is 4, its factor is 2 raised 2
@@ -77,7 +81,7 @@ int main()
         p3b=2; //hence, the p2a refers to the power of the factor 2. (2 raised 2)
     }
     
-    if (p2a>=p2b){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
+    if (p2a>p2b){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
         p2f=p2a;
         ap2=(pow(2,p2f));
     }
@@ -93,7 +97,7 @@ int main()
         bp2=1; //initializes to 1 if the number is a prime number
     }
     
-        if (p3a>=p3b){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
+        if (p3a>p3b){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
         p3f=p3a;
         ap3=(pow(3,p3f));
     }
@@ -103,6 +107,7 @@ int main()
     if (p3b>=p3a){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
         p3f=p3b;
         bp3=(pow(3,p3f));
+        printf("hello");
     }
     else{
         bp3=1; //initializes to 1 if the number is a prime number
