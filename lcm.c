@@ -107,7 +107,6 @@ int main()
     if (p3b>=p3a){ // this condition determines that factors with the higher power will be retained, example (6,8) the factors are (3^1 and 2^1 for 6) and (2^3), the lcm should be (3^1 * 2^3) because only one factor should be retained and it should have the highest power
         p3f=p3b;
         bp3=(pow(3,p3f));
-        printf("hello");
     }
     else{
         bp3=1; //initializes to 1 if the number is a prime number
@@ -115,18 +114,18 @@ int main()
 
     lcm=ap2*ap3*bp2*bp3*af*bf; //equation for lcm
     
-    printf("\nthe lcm is %f\n", lcm);
-    printf("\nap2 is %f", ap2); //all lines below are for checking the values of the variables
-    printf("\nap3 is %f", ap3);
-    printf("\nbp2 is %f", bp2);
-    printf("\nbp3 is %f", bp3);
-    printf("\np2a is %f", p2a);
-    printf("\np3a is %f", p3a);
-    printf("\np2b is %f", p2b);
-    printf("\np3b is %f", p3b);
-    printf("\np2f is %f", p2f);
-    printf("\np3f is %f", p3f);
-    printf("\naf is %f", af);
-    printf("\nbf is %f", bf);
+    printf("\nthe lcm is %0.0f\n", lcm);
+    printf("\nap2 is %0.0f", ap2); //all lines below are for checking the values of the variables
+    printf("\nap3 is %0.0f", ap3);
+    printf("\nbp2 is %0.0f", bp2);
+    printf("\nbp3 is %0.0f", bp3);
+    printf("\np2a is %0.0f", p2a);
+    printf("\np3a is %0.0f", p3a);
+    printf("\np2b is %0.0f", p2b);
+    printf("\np3b is %0.0f", p3b);
+    printf("\np2f is %0.0f", p2f);
+    printf("\np3f is %0.0f", p3f);
+    printf("\naf is %0.0f", af);
+    printf("\nbf is %0.0f", bf);
     return 0;
 }
