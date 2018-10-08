@@ -12,6 +12,13 @@ int main()
     scanf("%f", &a);
     printf("Enter the second number:");
     scanf("%f", &b);
+    
+    if(a==b){
+        lcm=a;
+    }
+    else{
+        
+    
     if (a==1 || a==5 || a==7){
         af=a; // if the number entered is a prime number, it is immediately multiplied to get lcm
     }
@@ -113,7 +120,7 @@ int main()
     }
 
     lcm=ap2*ap3*bp2*bp3*af*bf; //equation for lcm
-    
+    }
     printf("\nthe lcm is %0.0f\n", lcm);
     printf("\nap2 is %0.0f", ap2); //all lines below are for checking the values of the variables
     printf("\nap3 is %0.0f", ap3);
@@ -127,5 +134,6 @@ int main()
     printf("\np3f is %0.0f", p3f);
     printf("\naf is %0.0f", af);
     printf("\nbf is %0.0f", bf);
+        printf("\nthe lcm is %0.0f\n", lcm);
     return 0;
 }
