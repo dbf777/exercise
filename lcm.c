@@ -13,6 +13,11 @@ int main()
     printf("Enter the second number:");
     scanf("%f", &b);
     
+    if(a==0 || b==0){
+      lcm=0;  
+    }
+    
+    else{
     if(a==b){
         lcm=a;
     }
@@ -120,6 +125,7 @@ int main()
     }
 
     lcm=ap2*ap3*bp2*bp3*af*bf; //equation for lcm
+    }
     }
     printf("\nthe lcm is %0.0f\n", lcm);
     printf("\nap2 is %0.0f", ap2); //all lines below are for checking the values of the variables
